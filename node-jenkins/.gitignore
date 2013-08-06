@@ -3,4 +3,5 @@ lib-cov
 coverage.html
 test-results.tap
 test-results.xml
+jshint-violations.xml
 

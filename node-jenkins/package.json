@@ -4,6 +4,8 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "jscoverage": "*"
+    "jscoverage": "*",
+    "jslint": "*",
+    "jshint": "*"
   }
 }
