@@ -1,0 +1,3 @@
+new -s SessionName -n WindowName -c /tmp
+neww -d -n Home -c ~/
+
