@@ -26,4 +26,12 @@ Squash commits:
     git reset --soft HEAD~3
     git commit
 
+List remote tags:
+
+    git ls-remote --tags
+
+Delete tag (remote and local):
+
+    git push origin :tagname
+    git tag -d tagname
 
