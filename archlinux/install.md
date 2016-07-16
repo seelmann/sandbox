@@ -1,3 +1,7 @@
+Arch Linux Installation
+=======================
+
+```
 fdisk /dev/sda
 n p 1 2048 +256M
 n p 2 526336 rest
@@ -92,6 +96,6 @@ chmod +x /home/user/.xinitrc
 
 systemctl enable slim
 reboot
-
+```
 
 
