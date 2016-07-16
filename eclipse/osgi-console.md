@@ -1,3 +1,5 @@
+Eclipse OSGi Console
+====================
 
 Open _Console_ view, start _Host OSGi Console_.
 
