@@ -1,0 +1,37 @@
+pipeline {
+    agent none
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
+    stages {
+        stage('Build') {
+            agent { docker 'ubuntu' } 
+            steps {
+                echo 'Building'
+                echo "${params.Greeting} World!"
+            }
+        }
+        stage('Test') {
+            agent { docker 'ubuntu' } 
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Sanity check') {
+            steps {
+                //input "Does the staging environment look ok?"
+                //param.a = input message: 'I need input', parameters: [string(defaultValue: 'aaa', description: 'aaaaa', name: 'a', trim: false)]
+                script {
+                    env.b = input message: 'I need input', parameters: [choice(choices: 'b1\nb2\nb3', description: 'bbbbb', name: 'b')]
+                }
+                echo "Got ${env.b}"
+            }
+        }
+        stage('Deploy') {
+            agent { docker 'ubuntu' } 
+            steps {
+                echo "Deploying ${env.b}"
+            }
+        }
+    }
+}
