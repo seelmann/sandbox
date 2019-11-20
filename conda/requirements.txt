@@ -1,0 +1,17 @@
+notebook
+jupyter_core
+jupyterlab
+nbconvert
+nbformat
+ipykernel
+ipython
+ipywidgets
+pandas
+numpy
+matplotlib
+seaborn
+bokeh
+scikit-learn
+plotly
+statsmodels
+
